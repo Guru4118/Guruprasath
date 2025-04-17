@@ -1,13 +1,13 @@
 [
   {
-    "role": "Software Developer",
-    "organisation": "NWORX",
+    "role": "NWORX",
+    "organisation": "Full-Stack Developer",
     "startDate": "Oct, 2023",
     "endDate": "Present",
     "experiences": [
-      "Developing a cross-platform mobile application using Flutter to deliver a seamless user experience.",
-      "Collaborating with a team to design, implement, and optimize app features for performance and scalability.",
-      "Integrating APIs and backend services to ensure efficient data flow and user interactions."
+      "Developed mobile (Flutter) and web applications, ensuring seamless user experiences.",
+      "Built a scalable backend with Java Spring Boot, optimizing performance and security.",
+      "Implemented gRPC & HTTP APIs, improving efficiency and system communication."
     ],
     "imageSrc": "history/nworx.png"
   }

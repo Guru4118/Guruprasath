@@ -1,74 +1,40 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import styles from "./Experience.module.css";
-import skills from "../../data/skills.json";
-import history from "../../data/history.json";
-import { getImageUrl } from "../../utils";
 
-import flutterImg from "./react.png";
-import springBootImg from "./node.png";
-import djangoImg from "./dj.png";
-import javaImg from "./java.png";
-import pythonImg from "./py.png";
-import sqlImg from "./sql.png";
-import htmlImg from "./html.png";
-import me from "./me.png";
-import cssImg from "./css.png";
-
-// Create a mapping for imported images
-const skillImages = {
-  "Flutter": flutterImg,
-  "Spring Boot": springBootImg,
-  "Django": djangoImg,
-  "Java": javaImg,
-  "Python": pythonImg,
-  "Sql": sqlImg,
-  "HTML": htmlImg,
-  "CSS": cssImg
-};
-
-
-
+const skills = [
+  "Java", "C", "Python", "JavaScript", "HTML+CSS",
+  "Python Libraries", "ReactJs", "VSCode", "Git",
+  "GitHub", "Postman", "Express.js", "Tailwind CSS",
+  "MongoDB", "MySQL"
+];
 
 export const Experience = () => {
-  return (
-    
-    <section className={styles.container} id="experience">
-      
-      <h2 className={styles.title}>SKILLS</h2>
-      <div className={styles.content}>
-        <div className={styles.skills}>
-          {skills.map((skill, id) => {
-            return (
-              <div key={id} className={styles.skill}>
-                <div className={styles.skillImageContainer}>
-                <img src={skillImages[skill.title]} alt={skill.title} /> </div>
-                <p>{skill.title}</p>
-              </div>
-            );
-          })}
-        </div>
-        
-        <ul className={styles.history}>
-        <h2 className={styles.title}> EXPERIENCE</h2>
+  const [activeIndex, setActiveIndex] = useState(0);
 
-          {history.map((historyItem, id) => {
-            return (
-              <li key={id} className={styles.historyItem}>
-                <img src={me} alt="" />
-                <div className={styles.historyItemDetails}>
-                  <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>
-                  <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
-                  <ul>
-                    {historyItem.experiences.map((experience, id) => {
-                      return <li key={id}>{experience}</li>;
-                    })}
-                  </ul>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % skills.length);
+    }, 1000); // Change background every second
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className={styles.container} id="experience">
+      <h2 className={styles.title}>SKILLS</h2>
+      <div className={styles.skillsContainer}>
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            className={styles.skillPill}
+            animate={{ backgroundColor: index === activeIndex ? "#ffffff" : "#000000", color: index === activeIndex ? "#000000" : "#ffffff" }}
+            transition={{ duration: 0.2 }}
+            whileHover={{ scale: 1.1 }}
+          >
+            {skill}
+          </motion.div>
+        ))}
       </div>
     </section>
   );

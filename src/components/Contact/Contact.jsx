@@ -12,16 +12,16 @@ export const Contact = () => {
     <footer id="contact" className={styles.container}>
       <div className={styles.text}>
         <h2>Contact</h2>
-        <p>Feel free to reach out!</p>
+        
       </div>
       <ul className={styles.links}>
         <li className={styles.link}>
           <img src={email} alt="email" />
-          <a href="mailto:grandheneha@email.com">grandheneha@email.com</a>
+          <a href="mailto:gprasath103@gmail.com">gprasath103@gmail.com</a>
         </li>
         <li className={styles.link}>
           <img src= {linkedin} alt="linkedin logo" />
-          <a href="https://www.linkedin.com/in/nehagrandhe/">Neha Grandhe</a>
+          <a target="new" href="https://www.linkedin.com/in/guruprasath103/">Guruprasath</a>
         </li>
         
       </ul>

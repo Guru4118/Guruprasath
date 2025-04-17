@@ -1,4 +1,6 @@
 @import "../../vars.css";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
 
 .container {
   position: relative;
@@ -20,6 +22,9 @@
 }
 
 .title {
+  font-family: 'Orbitron', var(--font-roboto), monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   font-size: 72px;
   font-weight: 900;
   margin-bottom: 33px;
@@ -41,8 +46,8 @@
 
 .contactBtn {
   text-decoration: none;
-  background-color: var(--color-primary);
-  color: var(--color-text);
+  background-color: white;
+  color: black;
   border-radius: 100px;
   font-size: 30px;
   font-weight: 600;
@@ -84,7 +89,7 @@
   top: -128px;
   left: -10vw;
   border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
+ 
   filter: blur(100px);
   z-index: 0;
 }
@@ -98,10 +103,11 @@
   top: 246px;
   right: -25vw;
   border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
+  
   filter: blur(100px);
   z-index: 0;
 }
+
 
 @media screen and (max-width: 830px) {
   .container {

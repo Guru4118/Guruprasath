@@ -1,92 +1,89 @@
 @import "../../vars.css";
 
+/* Main container */
 .container {
   position: relative;
-  background-color: rgba(12, 12, 12, 0.6);
+  background-color: #ffffff;
   border-radius: 15px;
-  padding: 73px;
-  margin-top: 129px;
-  z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  padding: 60px;
+  margin: 120px auto;
+  width: 80%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Title styling */
 .title {
-  color: var(--color-text);
-  font-size: 35px;
+  color: #333;
+  font-size: 36px;
   font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
+/* Two-column layout */
 .content {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  gap: 40px;
+}
+
+/* Left side - text */
+.textSection {
+  flex: 1;
+  color: #333;
+  font-size: 18px;
+  padding: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.textSection:hover {
+  background-color: rgba(79, 86, 222, 0.2);
+  transform: scale(1.02);
+}
+
+.textSection h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Right side - SVG Image */
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .aboutImage {
-  width: 35%;
+  width: 80%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.aboutItems {
-  color: var(--color-text);
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+.aboutImage:hover {
+  transform: scale(1.1);
 }
 
-.aboutItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 20px;
-  list-style: none;
-  padding: 25px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(165, 215, 232, 0.42) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: 0.4s;
-}
-
-.aboutItem:hover {
-  background-size: 100% 100%;
-}
-
-.aboutItem h3 {
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.aboutItem p {
-  font-size: 25px;
-}
-
+/* Responsive Design */
 @media screen and (max-width: 830px) {
-  .container {
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .content {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .textSection {
+    margin-bottom: 30px;
   }
 
   .aboutImage {
-    display: none;
-  }
-
-  .aboutItems {
-    margin-top: 29px;
-  }
-
-  .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+    width: 100%;
   }
 }

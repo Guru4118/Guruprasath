@@ -1,30 +1,26 @@
 [
   {
-    "title": "Dairy Product Site",
+    "title": "Gym Website",
     "imageSrc": "projects/dairy_product_site.png",
-    "description": "A full-stack web app for dairy product management, order processing, and secure transactions.",
-    "skills": ["Django", "Python", "HTML", "CSS", "JavaScript", "Payment Gateway Integration"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  }
-  
-  ,
-  {
-    "title": "Data Augmentation for Handwritten Character Recognition",
-    "imageSrc": "projects/handwritten_recognition.png",
-    "description": "Enhanced digit recognition using augmented MNIST data for improved accuracy and real-world applications.",
-    "skills": ["GANs", "CNN", "TensorFlow", "Keras", "Pygame", "Flask", "Python"],
-    "demo": "https://www.example.com",
+    "description": "A modern, responsive static website for a gym built using React and CSS. Showcases services, trainers, and contact info with smooth navigation and clean UI.",
+    "skills": ["React", "CSS", "JavaScript", "Responsive Design"],
+    "demo": "https://y-not.netlify.app/",
     "source": "https://www.github.com"
   },
   {
-    "title": "Advanced Floral Recognition System Using CNN",
+    "title": "Y-NOT Clothing Site",
+    "imageSrc": "projects/handwritten_recognition.png",
+    "description": "A full-stack MERN application for a clothing store featuring secure user authentication, product catalog, cart system, and Stripe integration for payments.",
+    "skills": ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS", "Stripe", "JWT"],
+    "demo": "https://y-not-premium-b533.onrender.com/",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Underwater Debris Detection",
     "imageSrc": "projects/floral_recognition.png",
-    "description": "Developed a flower classification system using CNN, transfer learning, and ensemble techniques.",
-    "skills": ["VGG16", "CNN", "Random Forest", "SVM", "Data Augmentation", "Machine Learning", "Deep Learning"],
-    "demo": "https://www.example.com",
+    "description": "A deep learning project using YOLOv5 for real-time detection of underwater marine debris. Includes image preprocessing with Roboflow and alert system using Twilio.",
+    "skills": ["YOLOv5", "Roboflow", "Twilio", "Computer Vision", "Deep Learning", "Python"],
+    "demo": "https://universe.roboflow.com/ocean-2wxpy/ocean_waste-jujre/model/1",
     "source": "https://www.github.com"
   }
-  
-  
 ]
