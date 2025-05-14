@@ -1,7 +1,6 @@
 @import "../../vars.css";
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
 
-
 .container {
   position: relative;
   display: flex;
@@ -11,6 +10,8 @@
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .content {
@@ -19,6 +20,7 @@
   align-items: flex-start;
   color: var(--color-text);
   z-index: 1;
+  flex: 1;
 }
 
 .title {
@@ -36,12 +38,14 @@
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  text-align: left;
 }
 
 .description {
   font-size: 30px;
   font-family: var(--font-roboto);
   margin-bottom: 52px;
+  text-align: left;
 }
 
 .contactBtn {
@@ -49,17 +53,26 @@
   background-color: white;
   color: black;
   border-radius: 100px;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
-  padding: 17px 26px;
+  padding: 14px 24px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contactBtn:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
 }
 
 .heroImg {
-  width: 25%;
-  height: 50%; /* Ensuring it's a square */
-  border-radius: 50%; /* Makes the image round */
-  object-fit: cover; /* Ensures the image fills the circular shape properly */
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
   z-index: 1;
 
   animation-name: floating;
@@ -85,11 +98,9 @@
   width: 50vw;
   height: 50vw;
   min-width: 350px;
-  min-width: 350px;
   top: -128px;
   left: -10vw;
   border-radius: 764px;
- 
   filter: blur(100px);
   z-index: 0;
 }
@@ -98,23 +109,83 @@
   position: absolute;
   width: 70vw;
   height: 50vw;
-  min-width: 350px;
   min-width: 250px;
   top: 246px;
   right: -25vw;
   border-radius: 764px;
-  
   filter: blur(100px);
   z-index: 0;
 }
 
+/* ---------- RESPONSIVE STYLES ---------- */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 56px;
+  }
 
-@media screen and (max-width: 830px) {
+  .description {
+    font-size: 24px;
+  }
+
+  .heroImg {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .container {
     flex-direction: column-reverse;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
   }
 
   .content {
     align-items: center;
+  }
+
+  .title {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    font-size: 18px;
+    padding: 12px 20px;
+    margin-right: 0;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .heroImg {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .contactBtn {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+
+  .heroImg {
+    width: 150px;
+    height: 150px;
   }
 }
