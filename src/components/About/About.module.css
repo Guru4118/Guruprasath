@@ -10,9 +10,6 @@
   width: 80%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  display: flex; /* Enable flex for overall content arrangement */
-  flex-direction: column; /* Stack items vertically by default */
-  align-items: center; /* Center items horizontally */
 }
 
 .container:hover {
@@ -26,152 +23,123 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 40px;
-  width: 100%; /* Ensure title takes full width */
 }
 
-/* Main content area for image and education */
-.mainContent {
+/* Two-column layout */
+.content {
   display: flex;
-  flex-direction: column; /* Stack image and education by default */
-  width: 100%; /* Take full width within the container */
-  margin-bottom: 20px; /* Add some space below this section */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
 
-/* Left side - SVG Image */
-.imageSection {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px; /* Space below the image when stacked */
-  width: 100%; /* Ensure full width on mobile */
-}
-
-.aboutImage {
-  max-width: 80%; /* Adjust image size as needed */
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.aboutImage:hover {
-  transform: scale(1.05);
-}
-
-/* Right side - Education */
-.education {
+/* Left side - text */
+.textSection {
+  flex: 1;
   color: #333;
   font-size: 18px;
   padding: 20px;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   border-radius: 10px;
-  width: 100%; /* Ensure full width on mobile */
 }
 
-.education:hover {
+.textSection:hover {
   background-color: rgba(79, 86, 222, 0.2);
   transform: scale(1.02);
 }
 
-.education h3 {
+.textSection h3 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.education p {
-  margin-bottom: 5px;
+/* Right side - SVG Image */
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-/* Certifications Section (separate layout below) */
-.certifications {
-  color: #333;
-  font-size: 18px;
-  padding: 20px;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  border-radius: 10px;
-  width: 100%; /* Ensure full width */
-  text-align: center; /* Center the certifications content */
+.aboutImage {
+  width: 80%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.certifications:hover {
-  background-color: rgba(124, 45, 179, 0.2); /* Different hover color for distinction */
-  transform: scale(1.02);
+.aboutImage:hover {
+  transform: scale(1.1);
 }
 
-.certifications h3 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.certifications p {
-  margin-bottom: 5px;
-}
-
-/* Responsive Design for Mobile (Horizontal Image and Education) */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 30px; /* Adjust padding for smaller screens */
-    margin: 30px auto; /* Adjust margin */
-    width: 95%; /* Take more width on smaller screens */
+/* Responsive Design */
+@media screen and (max-width: 830px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .mainContent {
-    flex-direction: row; /* Horizontal layout on mobile */
-    align-items: flex-start; /* Align items to the top */
-    gap: 20px; /* Space between image and education */
-  }
-
-  .imageSection {
-    margin-bottom: 0; /* Remove bottom margin when horizontal */
-    flex: 1; /* Allow image section to take up space */
-  }
-
-  .education {
-    flex: 1; /* Allow education section to take up space */
-  }
-
-  .certifications {
-    margin-top: 30px; /* Add space above certifications */
-    text-align: left; /* Align certifications text to the left in its own section */
-  }
-}
-
-/* Further adjustments for very small screens */
-@media screen and (max-width: 480px) {
-  .title {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-
-  .mainContent {
-    flex-direction: column; /* Stack image and education on very small screens */
-    gap: 15px;
-  }
-
-  .imageSection {
-    margin-bottom: 15px;
+  .textSection {
+    margin-bottom: 30px;
   }
 
   .aboutImage {
-    max-width: 100%; /* Full width for very small screens */
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
   }
 
-  .education {
-    padding: 15px;
-    font-size: 16px;
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 
-  .education h3 {
+  .imageSection {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutImage {
+    width: 100px;
+    height: auto;
+  }
+
+  .textSection {
+    flex: 1 1 55%;
+    text-align: left;
+  }
+
+  .education,
+  .certifications,
+  .achievements {
+    margin-bottom: 1.5rem;
+  }
+
+  .education h3,
+  .certifications h3,
+  .achievements h3 {
     font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+
+  .education p,
+  .certifications p,
+  .achievements p {
+    font-size: 14px;
+    line-height: 1.4;
   }
 
   .certifications {
-    padding: 15px;
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
-  .certifications h3 {
-    font-size: 20px;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
   }
 }
