@@ -1,5 +1,4 @@
-@import "../../vars.css";
-
+/* Container for the entire card */
 .container {
   display: flex;
   flex-direction: column;
@@ -8,59 +7,42 @@
   box-shadow: 0 16px 14px 0 rgba(4, 21, 45, 0.7);
   padding: 20px;
   max-width: 360px;
+  height: 100%; /* Ensure child takes full height if in a grid */
+  min-height: 600px; /* Enforce consistent card height */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
+  justify-content: space-between; /* Evenly distribute elements */
 }
 
-/* Hover Effects */
-.container:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(176, 188, 87, 0.6);
-}
-
+/* Fix for image */
 .image {
+  width: 100%;
+  height: 220px; /* Fixed height */
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
+  z-index: 0;
+  position: relative;
 }
 
-.container:hover .image {
-  transform: scale(1.05);
-}
-
-/* Glassmorphism Effect */
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.container:hover::before {
-  opacity: 0;
-}
-
+/* Title and description remain inside */
 .title {
   font-size: 22px;
   font-weight: 700;
   color: #ffffff;
+  margin-bottom: 5px;
 }
 
 .description {
-  margin-top: 8px;
   font-size: 18px;
   font-weight: 400;
   color: #dfe7fd;
+  flex-grow: 1; /* Let it grow to fill available space */
 }
 
+/* Skill tags */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -69,76 +51,22 @@
   list-style: none;
 }
 
-.skill {
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 14px;
-  color: #ffffff;
-}
-
-
+/* Bottom links aligned properly */
 .links {
-  width: 100%;
-  margin-top: 20px;
+  margin-top: auto;
   display: flex;
   justify-content: space-around;
 }
 
-.link {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 6px 18px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+/* Ensures consistent card structure inside a grid or flex parent */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }
 
-/* Hover Effects */
-.link:hover {
-  background: #ffffff;
-  color: #132a53;
-  transform: scale(1.1);
-}
-/* Prevent image hover from overlapping content */
-.image {
-  border-radius: 10px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  z-index: 0;
-  position: relative;
-}
-
-/* Don't scale image beyond its boundaries */
-.container:hover .image {
-  transform: scale(1.02);
-}
-
-/* Demo Link Styling */
-.demoLink {
-  position: absolute;
-  top: 29px;
-  right: 35px;
-  z-index: 2;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 6px 14px;
-  background-color: rgb(202, 32, 32);
-  color: #ffffff;
-  border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.demoLink:hover {
-  background-color: #ffffff;
-  color: #000;
-  transform: scale(1.05);
+.card-wrapper .container {
+  flex: 1 1 300px; /* Flexible but consistent sizing */
+  max-width: 360px;
 }
