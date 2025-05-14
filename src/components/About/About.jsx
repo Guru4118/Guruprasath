@@ -13,7 +13,7 @@ export const About = () => {
             <h3>Education</h3>
             <p><strong>• Master Of Computer Applications (MCA)</strong></p>
             <p><em>Vellore Institute of Technology, Vellore</em></p>
-            <p>2023 – 2025 | <strong>CGPA:</strong> 8.19</p>
+            <p>2023 – 2025 | <strong>CGPA:</strong> 8.18</p>
 
             <p><strong>• Bachelor Of Computer Applications (BCA)</strong></p>
             <p><em>Vellore Institute of Technology, Vellore</em></p>
