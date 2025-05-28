@@ -4,9 +4,10 @@ import styles from "./Experience.module.css";
 
 const skills = [
   "Java", "C", "Python", "JavaScript", "HTML+CSS",
-  "Python Libraries", "ReactJs",  "Git", "Postman", "Express.js", "Tailwind CSS",
-  "MongoDB", "SQL"
+  "Python Libraries", "ReactJs", "Git", "Postman", "Express.js", "Tailwind CSS",
+  "MongoDB", "SQL", "Docker", "RESTful API", "Redis", "API Integration"
 ];
+
 
 export const Experience = () => {
   const [activeIndex, setActiveIndex] = useState(0);
