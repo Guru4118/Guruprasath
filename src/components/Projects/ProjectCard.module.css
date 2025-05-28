@@ -1,5 +1,4 @@
-@import "../../vars.css";
-
+/* Container stays the same */
 .container {
   display: flex;
   flex-direction: column;
@@ -13,45 +12,77 @@
   overflow: hidden;
 }
 
-/* Hover Effects */
 .container:hover {
   transform: scale(1.05);
   box-shadow: 0px 8px 20px rgba(176, 188, 87, 0.6);
 }
+ .container .demoLink {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
-.image {
+/* Image wrapper */
+.imageWrapper {
+  position: relative;
+  width: 100%;
   border-radius: 10px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.container:hover .image {
+/* Image styling */
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+/* Demo link - new style for desktop */
+.demoLink {
+  position: absolute;
+  top: 90%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(202, 32, 32, 0.9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  z-index: 2;
+}
+.demoLink:hover {
+    background-color: #ffffff;
+    color: #000;
+    
+  }
+
+/* Hover effect on imageWrapper for desktop */
+.imageWrapper:hover .image {
+  filter: brightness(50%);
   transform: scale(1.05);
 }
 
-/* Glassmorphism Effect */
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.imageWrapper:hover .demoLink {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.container:hover::before {
-  opacity: 0;
-}
-
+/* Title, description, skills */
 .title {
   font-size: 22px;
   font-weight: 700;
   color: #ffffff;
+  margin-top: 15px;
 }
 
 .description {
@@ -67,6 +98,7 @@
   gap: 8px;
   margin-top: 12px;
   list-style: none;
+  padding: 0;
 }
 
 .skill {
@@ -79,66 +111,37 @@
 }
 
 
-.links {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-}
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+  /* Remove hover overlay effect on mobile */
+  .imageWrapper:hover .image {
+    filter: none;
+    transform: none;
+  }
 
-.link {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 6px 18px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-/* Hover Effects */
-.link:hover {
-  background: #ffffff;
-  color: #132a53;
-  transform: scale(1.1);
-}
-/* Prevent image hover from overlapping content */
-.image {
-  border-radius: 10px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  z-index: 0;
-  position: relative;
-}
-
-/* Don't scale image beyond its boundaries */
-.container:hover .image {
-  transform: scale(1.02);
-}
-
-/* Demo Link Styling */
-.demoLink {
-  position: absolute;
-  top: 29px;
-  right: 35px;
-  z-index: 2;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 6px 14px;
-  background-color: rgb(202, 32, 32);
-  color: #ffffff;
-  border-radius: 20px;
+  .imageWrapper:hover .demoLink {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .demoLink {
+    top: 8px;             /* Near top */
+    right: 10px;          /* Near right edge */
+    left: auto;           /* Cancel left positioning */
+    transform: none;      /* Cancel transform positioning */
+    background-color: rgb(202, 32, 32);
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 20px;
+    width: auto;          /* Let width fit content */
+    z-index: 5;
     transition: all 0.3s ease-in-out;
-}
+  }
 
-.demoLink:hover {
-  background-color: #ffffff;
-  color: #000;
-  transform: scale(1.05);
+  .demoLink:hover {
+    background-color: #ffffff;
+    color: #000;
+    transform: scale(1.05);
+  }
 }
