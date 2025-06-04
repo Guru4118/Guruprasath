@@ -5,6 +5,8 @@ import two from "./cloth.jpg";
 import three from "./image.png";
 import blog from "./blog.jpg";
 import ai from "./ai.avif";
+import bento from "./bento.jpg";
+
 
 const imageMap = {
   "projects/dairy_product_site.png": one,
