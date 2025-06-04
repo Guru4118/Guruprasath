@@ -14,6 +14,7 @@ const imageMap = {
   "projects/floral_recognition.png": three,
   "projects/blogspace.png": blog,
   "projects/ai_mock_interview.png": ai,
+  "projects/bento_iphone_accessories.png" :bento,
 };
 
 export const ProjectCard = ({ project: { title, imageSrc, description, skills, demo } }) => {
