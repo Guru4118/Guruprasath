@@ -1,0 +1,145 @@
+@import "../../vars.css";
+
+/* Main container */
+.container {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 60px;
+  margin: 120px auto;
+  width: 80%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Title styling */
+.title {
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Two-column layout */
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Left side - text */
+.textSection {
+  flex: 1;
+  color: #333;
+  font-size: 18px;
+  padding: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.textSection:hover {
+  background-color: rgba(79, 86, 222, 0.2);
+  transform: scale(1.02);
+}
+
+.textSection h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Right side - SVG Image */
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutImage {
+  width: 80%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.aboutImage:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 830px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textSection {
+    margin-bottom: 30px;
+  }
+
+  .aboutImage {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .imageSection {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutImage {
+    width: 100px;
+    height: auto;
+  }
+
+  .textSection {
+    flex: 1 1 55%;
+    text-align: left;
+  }
+
+  .education,
+  .certifications,
+  .achievements {
+    margin-bottom: 1.5rem;
+  }
+
+  .education h3,
+  .certifications h3,
+  .achievements h3 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+
+  .education p,
+  .certifications p,
+  .achievements p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .certifications {
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+  }
+}

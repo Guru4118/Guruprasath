@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Flutter",
+    "imageSrc": "skills/react.png"
+  },
+  {
+    "title": "Spring Boot",
+    "imageSrc": "skills/node.png"
+  },
+  {
+    "title": "Django",
+    "imageSrc": "skills/graphql.png"
+  },
+  {
+    "title": "Java",
+    "imageSrc": "skills/figma.png"
+  }, 
+  {
+    "title": "Python",
+    "imageSrc": "skills/mongodb.png"
+  },
+  {
+    "title": "Sql",
+    "imageSrc": "skills/figma.png"
+  },
+  {
+    "title": "HTML",
+    "imageSrc": "skills/html.png"
+  },
+  {
+    "title": "CSS",
+    "imageSrc": "skills/css.png"
+  }
+  
+]

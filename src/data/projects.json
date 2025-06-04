@@ -1,0 +1,44 @@
+[
+  
+  {
+    "title": "AI-Driven Mock Interview System",
+    "imageSrc": "projects/ai_mock_interview.png",
+    "description": "An intelligent mock interview platform that uses AI to generate questions from resumes, convert them to voice, record user answers via microphone, evaluate performance, and provide feedback with score summaries. Utilizes resume parsing, OpenAI, TTS, STT, and webcam integration.",
+    "skills": ["React", "Node.js", "Express", "MongoDB", "OpenAI API", "Web Speech API", "Whisper", "Resume Parsing", "TTS/STT"],
+    "demo": "https://github.com/Guru4118/iqup",
+    "source": "https://github.com/yourusername/ai-mock-interview"
+  },
+  {
+    "title": "BlogSpace – Full-Stack Blog & Comment System",
+    "imageSrc": "projects/blogspace.png",
+    "description": "A scalable blog platform where users can read, post, and comment on blogs. Features JWT Auth, Redis caching, rate limiting, lazy loading, moderation, and a modern frontend with animations and responsive UI.",
+    "skills": ["React", "Node.js", "Express", "MongoDB", "Redis", "JWT", "Tailwind CSS", "AOS", "Rate Limiting"],
+    "demo": "https://b1ogspace.netlify.app/",
+    "source": "https://github.com/yourusername/blogspace"
+  }
+,  {
+    "title": "Y-NOT Clothing Site",
+    "imageSrc": "projects/handwritten_recognition.png",
+    "description": "A full-stack MERN application for a clothing store featuring secure user authentication, product catalog, cart system, and Stripe integration for payments.",
+    "skills": ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS", "Stripe", "JWT"],
+    "demo": "https://y-not-premium-b533.onrender.com/",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Gym Website",
+    "imageSrc": "projects/dairy_product_site.png",
+    "description": "A modern, responsive static website for a gym built using React and CSS. Showcases services, trainers, and contact info with smooth navigation and clean UI.",
+    "skills": ["React", "CSS", "JavaScript", "Responsive Design"],
+    "demo": "https://y-not.netlify.app/",
+    "source": "https://www.github.com"
+  },
+
+  {
+    "title": "Underwater Debris Detection",
+    "imageSrc": "projects/floral_recognition.png",
+    "description": "A deep learning project using YOLOv5 for real-time detection of underwater marine debris. Includes image preprocessing with Roboflow and alert system using Twilio.",
+    "skills": ["YOLOv5", "Roboflow", "Twilio", "Computer Vision", "Deep Learning", "Python"],
+    "demo": "https://universe.roboflow.com/ocean-2wxpy/ocean_waste-jujre/model/1",
+    "source": "https://www.github.com"
+  }
+]

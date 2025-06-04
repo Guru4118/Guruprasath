@@ -1,0 +1,14 @@
+[
+  {
+    "role": "NWORX",
+    "organisation": "Full-Stack Developer",
+    "startDate": "Oct, 2023",
+    "endDate": "Present",
+    "experiences": [
+      "Developed mobile (Flutter) and web applications, ensuring seamless user experiences.",
+      "Built a scalable backend with Java Spring Boot, optimizing performance and security.",
+      "Implemented gRPC & HTTP APIs, improving efficiency and system communication."
+    ],
+    "imageSrc": "history/nworx.png"
+  }
+]

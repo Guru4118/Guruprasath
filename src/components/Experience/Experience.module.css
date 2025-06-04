@@ -1,0 +1,81 @@
+.container {
+  text-align: center;
+  padding: 50px 20px; /* Added padding for small screens */
+  max-width: 70%; /* Adjust width for different screen sizes */
+  margin: 0 auto; /* Center the section */
+}
+
+.title {
+  font-size: 32px; /* Slightly smaller for better scaling */
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px; /* Reduced gap for small screens */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.skillPill {
+  background-color: black;
+  color: white;
+  font-size: 18px; /* Reduced size for smaller screens */
+  font-weight: bold;
+  padding: 10px 18px; /* Adjusted padding */
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  min-width: 120px; /* Smaller pills for compact layout */
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skillPill:hover {
+  background-color: #ffcc00;
+  color:white;
+  border-color: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Full width for small screens */
+    padding: 30px 10px; /* Less padding for small screens */
+  }
+
+  .title {
+    font-size: 28px; /* Reduce title size */
+  }
+
+  .skillsContainer {
+    gap: 8px; /* Reduce gap */
+  }
+
+  .skillPill {
+    font-size: 16px; /* Smaller text */
+    padding: 8px 16px;
+    min-width: 100px; /* Adjust width */
+  }
+}
+
+@media (max-width: 480px) {
+  .skillPill {
+    font-size: 14px; /* Smaller text for mobile */
+    padding: 6px 12px; /* Compact padding */
+    min-width: 90px; /* Smaller pills */
+  }
+
+  .title {
+    font-size: 24px; /* More compact title */
+  }
+}
