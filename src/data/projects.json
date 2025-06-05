@@ -5,7 +5,7 @@
     "imageSrc": "projects/ai_mock_interview.png",
     "description": "An intelligent mock interview platform that uses AI to generate questions from resumes, convert them to voice, record user answers via microphone, evaluate performance, and provide feedback with score summaries. Utilizes resume parsing, OpenAI, TTS, STT, and webcam integration.",
     "skills": ["React", "Node.js", "Express", "MongoDB", "OpenAI API", "Web Speech API", "Whisper", "Resume Parsing", "TTS/STT"],
-    "demo": "https://github.com/Guru4118/iqup",
+    "demo": "https://iqup.netlify.app/",
     "source": "https://github.com/yourusername/ai-mock-interview"
   },
   {
