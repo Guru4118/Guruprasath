@@ -5,7 +5,7 @@
     "imageSrc": "projects/ai_mock_interview.png",
     "description": "An intelligent mock interview platform that uses AI to generate questions from resumes, convert them to voice, record user answers via microphone, evaluate performance, and provide feedback with score summaries. Utilizes resume parsing, OpenAI, TTS, STT, and webcam integration.",
     "skills": ["React", "Node.js", "Express", "MongoDB", "OpenAI API", "Web Speech API", "Whisper", "Resume Parsing", "TTS/STT"],
-    "demo": "https://github.com/Guru4118/iqup",
+    "demo": "https://iqup.netlify.app/",
     "source": "https://github.com/yourusername/ai-mock-interview"
   },
   {
@@ -24,6 +24,15 @@
     "demo": "https://y-not-premium-b533.onrender.com/",
     "source": "https://www.github.com"
   },
+  {
+  "title": "Bento Layout for iPhone Accessories",
+  "imageSrc": "projects/bento_iphone_accessories.png",
+  "description": "A sleek, modern web layout inspired by the Bento style used by Apple to showcase iPhone accessories. Features modular grid sections.",
+  "skills": ["HTML", "CSS", "Tailwind CSS", "JavaScript", "Responsive Design", "UI/UX", "Grid Layout"],
+  "demo": "https://bento11.netlify.app/",
+  "source": "https://github.com/Guru4118/bento-iphone-accessories"
+}
+,
   {
     "title": "Gym Website",
     "imageSrc": "projects/dairy_product_site.png",
