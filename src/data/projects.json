@@ -26,14 +26,7 @@
   "source": "https://github.com/your-username/framer-motion-watch-site"
 }
 
-, {
-  "title": "Bento Layout for iPhone Accessories",
-  "imageSrc": "projects/bento_iphone_accessories.png",
-  "description": "A sleek, modern web layout inspired by the Bento style used by Apple to showcase iPhone accessories. Features modular grid sections.",
-  "skills": ["HTML", "CSS", "Tailwind CSS", "JavaScript", "Responsive Design", "UI/UX", "Grid Layout"],
-  "demo": "https://bento11.netlify.app/",
-  "source": "https://github.com/Guru4118/bento-iphone-accessories"
-}
+
 , {
     "title": "Y-NOT Clothing Site",
     "imageSrc": "projects/handwritten_recognition.png",
