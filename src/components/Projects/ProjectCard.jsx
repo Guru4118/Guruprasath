@@ -6,6 +6,7 @@ import three from "./image.png";
 import blog from "./blog.jpg";
 import ai from "./ai.avif";
 import bento from "./bento.jpg";
+import framer from "./framer.jpg";
 
 
 const imageMap = {
@@ -15,6 +16,7 @@ const imageMap = {
   "projects/blogspace.png": blog,
   "projects/ai_mock_interview.png": ai,
   "projects/bento_iphone_accessories.png" :bento,
+  "projects/animated_watch_showcase.png":framer,
 };
 
 export const ProjectCard = ({ project: { title, imageSrc, description, skills, demo } }) => {
