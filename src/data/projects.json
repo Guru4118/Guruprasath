@@ -16,7 +16,17 @@
     "demo": "https://b1ogspace.netlify.app/",
     "source": "https://github.com/yourusername/blogspace"
   }
-,  {
+, 
+  {
+  "title": "Animated Landing page",
+  "imageSrc": "projects/animated_watch_showcase.png",
+  "description": "A modern Framer Motion-based website showcasing smartwatches with hover animations, glowing drop shadows, and animated navigation. Built with Tailwind CSS and deployed on Netlify.",
+  "skills": ["Framer Motion", "React", "Tailwind CSS", "Netlify", "Variants", "AOS"],
+  "demo": "https://framer-mot1on.netlify.app/",
+  "source": "https://github.com/your-username/framer-motion-watch-site"
+}
+
+, {
   "title": "Bento Layout for iPhone Accessories",
   "imageSrc": "projects/bento_iphone_accessories.png",
   "description": "A sleek, modern web layout inspired by the Bento style used by Apple to showcase iPhone accessories. Features modular grid sections.",
