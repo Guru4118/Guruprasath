@@ -30,10 +30,10 @@ export const Hero = () => {
         </p>
 
         <p className={styles.description}>
-          I turn performance problems into measurable wins and ship AI-powered 
-          products that work in production. At Xerago I lifted a client's Lighthouse 
-          score from 50 to 90+, built a Chrome Extension that replaced Adobe's 
-          enterprise analytics tooling, and delivered a real-time AI voice 
+          I turn performance problems into measurable wins and ship AI-powered
+          products that work in production. At Xerago I lifted a client's Lighthouse
+          score from 50 to 90+, built a Chrome Extension that replaced Adobe's
+          enterprise analytics tooling, and delivered a real-time AI voice
           interview platform end-to-end.
         </p>
 
@@ -53,7 +53,7 @@ export const Hero = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1xZHXdHlJXhmRmYPtt5cSx5cttzevaBmM/view?usp=sharing"
+            href="https://drive.google.com/file/d/1YyDGJPfm9NkfRevZgZa4dzUdmh3uvWAd/view?usp=drive_link"
             className={styles.btnSecondary}
           >
             Resume ↗
