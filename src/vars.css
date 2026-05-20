@@ -1,0 +1,55 @@
+:root {
+  /* --- Core Brand --- */
+  --color-text: #f5fa5d;
+  --color-bg: #000000;
+  --color-surface: #0d0d0d;
+  --color-surface-2: #141414;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+
+  /* --- Accent --- */
+  --color-accent: #f5fa5d;
+  --color-accent-dim: rgba(245, 250, 93, 0.12);
+  --color-accent-hover: #fffb80;
+
+  /* --- Text hierarchy --- */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.6);
+  --color-text-muted: rgba(255, 255, 255, 0.35);
+
+  /* --- Semantic --- */
+  --color-success: #4ade80;
+  --color-success-bg: rgba(74, 222, 128, 0.1);
+
+  /* --- Spacing scale (8px base) --- */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* --- Section rhythm --- */
+  --section-gap: 120px;
+  --section-padding-x: 10%;
+
+  /* --- Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 100px;
+
+  /* --- Fonts --- */
+  --font-sans: "Outfit", Arial, Helvetica, sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+  --font-display: "Orbitron", var(--font-sans);
+
+  /* --- Transitions --- */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}

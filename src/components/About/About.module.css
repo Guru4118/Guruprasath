@@ -1,0 +1,192 @@
+.container {
+  padding: var(--section-gap) var(--section-padding-x);
+}
+
+.sectionLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.sectionTitle {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Summary block */
+.summaryBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.summary {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+}
+
+.resumeBtn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: var(--color-accent-dim);
+  border: 0.5px solid rgba(245, 250, 93, 0.3);
+  border-radius: var(--radius-pill);
+  padding: 10px 20px;
+  align-self: flex-start;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.resumeBtn:hover {
+  background: rgba(245, 250, 93, 0.2);
+  border-color: rgba(245, 250, 93, 0.5);
+}
+
+/* Info cards */
+.infoBlocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.infoCard {
+  background: var(--color-surface);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.cardTitle {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-1);
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+/* Education */
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.eduItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.eduDegree {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.eduInstitution {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.eduMeta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* Certifications */
+.certList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.certItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.certName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.certLink {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.certLink:hover {
+  opacity: 0.8;
+}
+
+.certIssuer {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media screen and (max-width: 830px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 80px 6%;
+  }
+}
+
+/* Currently focused on block */
+.focusList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.focusItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.focusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.focusText {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Multiple summary paragraphs */
+.summaryBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}

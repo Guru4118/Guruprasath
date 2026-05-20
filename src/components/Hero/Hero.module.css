@@ -1,0 +1,255 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px var(--section-padding-x) var(--space-12);
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 720px;
+  z-index: 1;
+}
+
+/* Availability badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.06);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.3px;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-success);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Title */
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 7vw, 80px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+}
+
+.name {
+  background: linear-gradient(90deg, #ffffff 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+  -webkit-text-fill-color: var(--color-accent);
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Role subtitle */
+.role {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+/* Description */
+.description {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+  max-width: 600px;
+}
+
+/* Achievement metrics */
+.achievements {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.achievementCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 20px;
+  min-width: 120px;
+  transition: border-color var(--transition-base), background var(--transition-base);
+}
+
+.achievementCard:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-dim);
+}
+
+.achievementValue {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.achievementLabel {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  text-decoration: none;
+  background: var(--color-accent);
+  color: #000;
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 28px;
+  letter-spacing: 0.3px;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  text-decoration: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-hover);
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 28px;
+  letter-spacing: 0.3px;
+  transition: border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btnSecondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Background glow blobs */
+.glowTop {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 300px;
+  top: -15vw;
+  left: -5vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 250, 93, 0.06) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glowBottom {
+  position: absolute;
+  width: 60vw;
+  height: 50vw;
+  min-width: 250px;
+  bottom: -10vw;
+  right: -10vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 250, 93, 0.04) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 100px 6% var(--space-10);
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  .achievements {
+    gap: var(--space-2);
+  }
+
+  .achievementCard {
+    padding: 12px 16px;
+    min-width: 100px;
+  }
+
+  .achievementValue {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 90px 5% var(--space-8);
+  }
+
+  .achievements {
+    width: 100%;
+  }
+
+  .achievementCard {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    text-align: center;
+    width: 100%;
+  }
+}

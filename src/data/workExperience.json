@@ -1,0 +1,37 @@
+[
+  {
+    "company": "Xerago",
+    "role": "Software Developer",
+    "period": "July 2024 – Present",
+    "location": "Chennai, India",
+    "projects": [
+      {
+        "name": "Website Re-Architecture",
+        "context": "The client's site was scoring 50 on Lighthouse — slow loads, poor SEO, and a content pipeline where every text change needed a developer.",
+        "what": "Re-architected the entire site around Docusaurus, designed a three-layer Markdown → JSON → React content system, and extracted 45+ reusable components that non-technical teams could operate independently.",
+        "result": "Lighthouse jumped from 50 to 90+ across all pages. Load times dropped ~40%. Content team ships updates without touching code.",
+        "metric": "50 → 90+",
+        "metricSub": "Lighthouse · ~40% faster loads",
+        "stack": ["React.js", "Docusaurus", "TypeScript", "MDX", "Tailwind CSS", "Git"]
+      },
+      {
+        "name": "Browser Analytics Extension",
+        "context": "Enterprise analytics debugging required Adobe Experience Platform and Omnibug — expensive, not tailored to the team's SPA routing patterns, and slow to iterate on.",
+        "what": "Built a Chrome Extension from scratch in TypeScript (MV3) with cross-tab network request capture, real-time SPA route-change detection, live event inspection, and payload comparison — all without leaving the browser.",
+        "result": "Replaced both Adobe Experience Platform and Omnibug entirely for the team's analytics debugging workflow. Zero onboarding cost versus the commercial tools.",
+        "metric": "Replaced Adobe AEP",
+        "metricSub": "Enterprise tooling · MV3",
+        "stack": ["TypeScript", "Chrome Extensions MV3", "WebRequests API", "SPA Detection", "Git"]
+      },
+      {
+        "name": "Backend Form Processing APIs",
+        "context": "Client campaigns were receiving spam at scale through unprotected contact forms, and unreliable SMTP delivery was causing leads to drop silently.",
+        "what": "Architected 8+ production REST APIs in Node.js and Express with layered defences: Google reCAPTCHA v3, IP-based rate limiting, and secure SMTP handling with delivery confirmation.",
+        "result": "Zero reported spam incidents post-deployment. Reliable form delivery across all client campaigns with full audit trail.",
+        "metric": "Zero spam incidents",
+        "metricSub": "8+ APIs · Post-deployment",
+        "stack": ["Node.js", "Express.js", "reCAPTCHA v3", "Rate Limiting", "SMTP", "REST API Design"]
+      }
+    ]
+  }
+]

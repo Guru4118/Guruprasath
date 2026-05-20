@@ -1,0 +1,7 @@
+{
+  "Frontend": ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux", "Context API"],
+  "Backend": ["Node.js", "Express.js", "REST API Design", "Rate Limiting", "reCAPTCHA", "SMTP"],
+  "Databases": ["MongoDB", "MySQL", "Redis"],
+  "AI & Integrations": ["OpenAI API", "Whisper STT", "TTS", "Prompt Engineering", "WebRTC"],
+  "Tools & Platforms": ["Git", "Postman", "Chrome Extensions MV3", "Docusaurus", "Vite", "Netlify"]
+}

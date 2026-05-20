@@ -1,0 +1,35 @@
+[
+  {
+    "title": "AI Mock Interview System",
+    "imageSrc": "projects/ai_mock_interview.png",
+    "impact": "Real-time AI voice pipeline",
+    "context": "Most AI interview tools are text-based. The challenge here was building a voice pipeline that felt like a real conversation — low enough latency between speech capture, transcription, and AI response that the user didn't feel they were waiting on a machine.",
+    "what": "Designed the pipeline around WebRTC for direct audio capture, Whisper STT for transcription, and streamed TTS playback rather than waiting for full audio generation. OpenAI generates role-specific questions from the uploaded resume via prompt engineering. Session data is automatically purged after each interview — no persistent storage of user responses.",
+    "result": "End-to-end voice interview flow in production. Resume → questions → live voice Q&A → session cleanup, with no data retained post-session.",
+    "skills": ["React.js", "Node.js", "Express.js", "OpenAI API", "WebRTC", "Whisper STT", "TTS", "MongoDB"],
+    "demo": "https://iqup.netlify.app/",
+    "source": "https://github.com/Guru4118"
+  },
+  {
+    "title": "BlogSpace — Production MERN Platform",
+    "imageSrc": "projects/blogspace.png",
+    "impact": "Redis caching · JWT · RBAC",
+    "context": "Needed a blog platform that could handle concurrent read traffic without hammering the database on every request, with proper access control so admins, authors, and readers had distinct capabilities.",
+    "what": "Implemented Redis caching for high-read endpoints, reducing DB calls on repeated queries. JWT-based auth with role-based access control separates admin, author, and reader flows. Rate limiting on write endpoints prevents abuse. MongoDB queries optimised with indexing for production load.",
+    "result": "Full CRUD with content moderation, layered auth, and caching — deployed and live. Demonstrates the full backend decision stack beyond just wiring up a REST API.",
+    "skills": ["React.js", "Node.js", "Express.js", "MongoDB", "Redis", "JWT", "Tailwind CSS"],
+    "demo": "https://b1ogspace.netlify.app/",
+    "source": "https://github.com/Guru4118"
+  },
+  {
+    "title": "Y-NOT — Full-Stack E-Commerce",
+    "imageSrc": "projects/handwritten_recognition.png",
+    "impact": "Stripe payments · Full order flow",
+    "context": "Wanted a full-stack project where the frontend, auth, and payment flow were all owned end-to-end — not a tutorial clone, but a deployable product with real purchase capability.",
+    "what": "MERN stack with JWT session auth, product catalogue, cart with persistence, and Stripe checkout integration. Full order flow from browse to payment confirmation, with protected routes on both client and server.",
+    "result": "Deployed and functional e-commerce store. Covers the complete flow a real product would need: auth, catalogue, cart state, and payment.",
+    "skills": ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "Stripe", "JWT"],
+    "demo": "https://y-not-premium-b533.onrender.com/",
+    "source": "https://github.com/Guru4118"
+  }
+]

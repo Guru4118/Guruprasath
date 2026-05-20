@@ -1,0 +1,36 @@
+.container {
+  padding: var(--section-gap) var(--section-padding-x);
+}
+
+.sectionLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-8);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 80px 6%;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}
